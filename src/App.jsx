@@ -5,6 +5,7 @@ import './App.css'
 
 import React from 'react'
 // Import all components
+import ParticleTrail from './components/ParticleTrail'
 import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/Projects'
@@ -20,7 +21,8 @@ const App = () => {
   return (
     <>
       <div className="app">
-        {/* Pass data as props to each component */}
+        <ParticleTrail />
+
         <Header personal={personal} />
         <main>
           <About summary={summary} skills={skills} />
@@ -30,6 +32,7 @@ const App = () => {
         {/* Footer */}
         <footer className="footer">
           <p>© 2025 {personal.name}. Built with React + Vite.</p>
+          <p>Special thanks to Rahul Mishra on Unsplash</p>
         </footer>
 
         {/* BackToTop component */}
