@@ -17,9 +17,9 @@ const ParticleTrail = () => {
       constructor(x, y) {
         this.x = x
         this.y = y
-        this.size = Math.random() * 5 + 3  // Random size between 3-8px
+        this.size = Math.random() * 4 + 2  // Random size between 3-8px
         this.life = 255  // Opacity (255 = fully visible)
-        this.decay = Math.random() * 3 + 2  // How fast it fades (2-5)
+        this.decay = Math.random() * 4 + 3  // How fast it fades (2-5)
         
         // Random velocity for slight movement
         this.vx = (Math.random() - 0.5) * 0.5
@@ -70,7 +70,7 @@ const ParticleTrail = () => {
         p.clear()
 
         // Add new particle at mouse position (limit spawn rate)
-        if (p.frameCount % 2 === 0) {  // Every 2 frames
+        if (p.frameCount % 3 === 0) {  // Every 2 frames
           particles.push(new Particle(p.mouseX, p.mouseY))
         }
 
