@@ -157,7 +157,21 @@ body {
 
 /* Header Styles */
 .header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  /* Background image with diagonal blend overlay */
+  background: 
+    linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.92) 0%,     /* Top-left: mostly gradient */
+      rgba(37, 99, 235, 0.7) 50%,     /* Middle: balanced blend */
+      rgba(30, 64, 175, 0.6) 100%     /* Bottom-right: more image visible */
+    ),
+    url('/header-bg.jpg');
+  
+  /* Background settings */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
   color: white;
   padding: 3rem 2rem;
   border-radius: var(--border-radius);
