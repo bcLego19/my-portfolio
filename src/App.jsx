@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import favicon from '/favicon.svg'
+import faviconIcon from '/favicon.ico'
 import './App.css'
 
 import React from 'react'
@@ -31,7 +33,7 @@ const App = () => {
 
         {/* Footer */}
         <footer className="footer">
-          <p>© 2025 {personal.name}. Built with React + Vite.</p>
+          <p>© January 2026 {personal.name}. Built with React + Vite.</p>
           <p>Special thanks to Rahul Mishra on Unsplash</p>
         </footer>
 
