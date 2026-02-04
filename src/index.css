@@ -318,6 +318,251 @@ section h2 {
   font-size: 0.875rem;
 }
 
+/* ========================================
+   DARK MODE VARIABLES & STYLES
+   ======================================== */
+
+/* Light mode variables (default) */
+:root {
+  --primary-color: #3DA1FF;
+  --secondary-color: #3895FF;
+  --button-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --button-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.4);
+  --circle-radius: 50%;
+  --text-color: #1f2937;
+  --bg-color: #f9fafb;
+  --card-bg: #ffffff;
+  --border-radius: 8px;
+  --spacing: 1rem;
+  
+  /* Add transition for smooth theme switching */
+  --transition-speed: 0.3s;
+}
+
+/* Dark mode variables */
+html.dark-mode {
+  --text-color: #e5e7eb;           /* Off-white text */
+  --bg-color: #1a1a1a;             /* Charcoal background */
+  --card-bg: #2d2d2d;              /* Darker card background */
+  --button-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  --button-shadow-hover: 0 6px 16px rgba(37, 99, 235, 0.5);
+}
+
+/* Smooth transitions for theme change */
+body,
+section,
+.project-card,
+.skill-group,
+.nav-link,
+.contact-link,
+.btn {
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+}
+
+/* ========================================
+   DARK MODE TOGGLE BUTTON
+   ======================================== */
+
+.dark-mode-toggle {
+  /* Positioning - bottom left */
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  
+  /* Size */
+  width: 50px;
+  height: 50px;
+  
+  /* Appearance */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  /* Smooth transitions */
+  transition: all 0.3s ease;
+  
+  /* Center icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode: black button with white icon */
+.dark-mode-toggle.light {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Dark mode: off-white button with black icon */
+.dark-mode-toggle.dark {
+  background: #e5e7eb;
+  color: #1a1a1a;
+}
+
+/* Hover effects */
+.dark-mode-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Icon sizing */
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* Show/hide sun and moon based on theme */
+.dark-mode-toggle.light .moon {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode-toggle.light .sun {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode-toggle.dark .sun {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode-toggle.dark .moon {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Accessibility - focus state */
+.dark-mode-toggle:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    bottom: 1rem;
+    left: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .theme-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ========================================
+   DARK MODE SPECIFIC STYLES
+   ======================================== */
+
+/* Headings in dark mode get blue border */
+html.dark-mode section h2 {
+  border: 3px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  display: inline-block;
+}
+
+/* Section hover effect in dark mode */
+html.dark-mode section:hover {
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Project cards in dark mode */
+html.dark-mode .project-card {
+  background: var(--card-bg);
+  border-color: #3d3d3d;
+}
+
+html.dark-mode .project-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* Navigation links in dark mode */
+html.dark-mode .nav-link {
+  color: var(--text-color);
+}
+
+html.dark-mode .nav-link.active {
+  background-color: rgba(37, 99, 235, 0.3);
+}
+
+html.dark-mode .nav-link:hover {
+  background-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Contact links in dark mode */
+html.dark-mode .contact-link {
+  color: var(--text-color);
+}
+
+/* Buttons in dark mode */
+html.dark-mode .btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+html.dark-mode .btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+html.dark-mode .btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Tech tags in dark mode */
+html.dark-mode .tech-tag {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Skills in dark mode */
+html.dark-mode .skill-group li {
+  border-bottom-color: #3d3d3d;
+}
+
+html.dark-mode .skill-group li:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Footer in dark mode */
+html.dark-mode .footer {
+  color: #9ca3af;
+}
+
+/* Back to top button adjustments */
+html.dark-mode .back-to-top {
+  background: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+html.dark-mode .back-to-top:hover {
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.6);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .app {

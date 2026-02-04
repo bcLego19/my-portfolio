@@ -12,6 +12,7 @@ import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/Projects'
 import BackToTop from './components/BackToTop'
+import DarkModeToggle from './components/DarkModeToggle'
 
 // Import data
 import {portfolioData} from './data/portfolioData'
@@ -39,6 +40,7 @@ const App = () => {
 
         {/* BackToTop component */}
         <BackToTop />
+        <DarkModeToggle />
       </div>
     </>
   )
