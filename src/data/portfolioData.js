@@ -3,7 +3,7 @@ export const portfolioData = {
   // Personal Info (Object with nested properties)
   personal: {
     name: "Conner Batson",
-    title: "Full Stack Software Engineer",
+    title: "Frontend Developer",
     tagline: "Quality-first engineering with a passion for scalable architecture",
     phone: "360-842-4748",
     email: "cjbatson2@gmail.com",
@@ -12,25 +12,21 @@ export const portfolioData = {
   },
 
   // About Section (Strings)
-  summary: "Resourceful Full Stack Software Engineer with a solid foundation in TypeScript, React/Next.js, and Python (Django/FastAPI). Possesses a unique, quality-first perspective developed as a Software Testing Specialist, enabling methodical debugging, full-stack troubleshooting, and robust system design.",
+  summary: "Frontend developer with a CS degree and a background in software testing. I build React applications with a focus on state management, accessibility, and clean architecture. My most recent work includes a 4-month browser-based flowchart editor featuring keyboard accessibility, undo/redo history, and multi-format export — built with React and developed collaboratively with AI tooling as part of the engineering process.\n\nI hold an Oracle Cloud Infrastructure Generative AI certification and bring a quality-first perspective from professional software testing at Core Commissions.",
 
   // Technical Skills (Array of Objects)
   skills: [
     {
       category: "Primary Frontend",
-      items: ["TypeScript", "React", "Next.js", "JavaScript", "HTML", "CSS (Tailwind)"]
+      items: ["Javascript/TypeScript", "React", "HTML/CSS", "Tailwind CSS"]
     },
     {
-      category: "Primary Backend",
-      items: ["Python (FastAPI, Django)", "Node.js (Nest.js)", "RESTful APIs"]
+      category: "Tools and Workflow",
+      items: ["Git", "Docker", "Figma", "Trello", "Agile", "CI/CD"]
     },
     {
-      category: "Databases",
-      items: ["PostgreSQL", "MongoDB", "SQL", "Prisma/SQLAlchemy"]
-    },
-    {
-      category: "Quality & Tools",
-      items: ["Git", "Agile", "Test Automation", "CI/CD", "Docker"]
+      category: "Familiar With",
+      items: ["Node.js", "Python (FastAPI, Django)", "PostgreSQL", "REST APIs"]
     }
   ],
 
@@ -38,40 +34,40 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "Currency Converter",
-      description: "Containerized currency allocation tool with real-time exchange rates and budget validation logic.",
-      technologies: ["JavaScript", "Docker", "REST APIs"],
-      highlights: [
-        "Docker containerization for consistent deployment",
-        "Real-time state management with dynamic field allocation",
-        "Front-end validation preventing data corruption"
-      ],
-      github: "https://github.com/bcLego19/currency-converter",
-      liveDemo: null
-    },
-    {
-      id: 2,
       title: "Flowchart Builder",
-      description: "Full-stack SaaS application for creating interactive flowcharts with advanced state management.",
+      description: "Browser-based flowchart editor built over 4 months with React and Vite.",
       technologies: ["TypeScript", "React", "Vite"],
       highlights: [
-        "Undo/redo functionality with complex state management",
-        "CRUD operations for nodes and connections",
-        "JSON import/export and PNG export capabilities",
-        "Keyboard accessibility features"
+        "Custom keyboard accessibility with ARIA labels and full focus management"
+        "Undo/redo history implemented via useReducer",
+        "Multi-type nodes with drag-and-drop canvas positioning",
+        "Import/export as JSON; export to PDF and PNG",
+        "Built incrementally using AI as a collaborative development tool"
       ],
       github: "https://github.com/bcLego19/flowchart-builder",
       liveDemo: null
     },
     {
+      id: 2,
+      title: "Currency Converter",
+      description: "ontainerized currency allocation tool with real-time exchange rates.",
+      technologies: ["JavaScript", "Docker", "REST APIs"],
+      highlights: [
+        "Dockerized for consistent local and cloud deployment",
+        "Real-time exchange rate integration via external API",
+        "Budget validation logic with dynamic field allocation"
+      ],
+      github: "https://github.com/bcLego19/currency-converter",
+      liveDemo: null
+    },
+    {
       id: 3,
       title: "Retro Game Library",
-      description: "Collection of classic arcade games built with dependency-free vanilla JavaScript, featuring responsive design.",
+      description: "Classic arcade games built with dependency-free vanilla JavaScript.",
       technologies: ["HTML5 Canvas", "Vanilla JavaScript", "CSS"],
       highlights: [
-        "High-performance frame-by-frame rendering",
-        "Adaptive design maintaining aspect ratio across devices",
-        "Single-file application architecture",
+        "Frame-by-frame rendering using Canvas API",
+        "Responsive design maintaining aspect ratio across screen sizes",
         "Currently features Classic Pong"
       ],
       github: "https://github.com/bcLego19/game-library",
