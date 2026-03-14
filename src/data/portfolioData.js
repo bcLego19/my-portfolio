@@ -38,7 +38,7 @@ export const portfolioData = {
       description: "Browser-based flowchart editor built over 4 months with React and Vite.",
       technologies: ["TypeScript", "React", "Vite"],
       highlights: [
-        "Custom keyboard accessibility with ARIA labels and full focus management"
+        "Custom keyboard accessibility with ARIA labels and full focus management",
         "Undo/redo history implemented via useReducer",
         "Multi-type nodes with drag-and-drop canvas positioning",
         "Import/export as JSON; export to PDF and PNG",
