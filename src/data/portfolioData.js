@@ -45,7 +45,7 @@ export const portfolioData = {
         "Built incrementally using AI as a collaborative development tool"
       ],
       github: "https://github.com/bcLego19/flowchart-builder",
-      liveDemo: null
+      liveDemo: "https://bclego19.github.io/flowchart-builder"
     },
     {
       id: 2,
