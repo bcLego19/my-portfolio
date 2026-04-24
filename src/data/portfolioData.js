@@ -50,7 +50,7 @@ export const portfolioData = {
     {
       id: 2,
       title: "Currency Converter",
-      description: "ontainerized currency allocation tool with real-time exchange rates.",
+      description: "Containerized currency allocation tool with real-time exchange rates.",
       technologies: ["JavaScript", "Docker", "REST APIs"],
       highlights: [
         "Dockerized for consistent local and cloud deployment",
