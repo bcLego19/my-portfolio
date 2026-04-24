@@ -24,7 +24,6 @@ const App = () => {
   return (
     <>
       <div className="app">
-        <title>Conner Batson<title/>
         <ParticleTrail />
 
         <Header personal={personal} />
