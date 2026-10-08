@@ -3,7 +3,7 @@ export const portfolioData = {
   // Personal Info (Object with nested properties)
   personal: {
     name: "Conner Batson",
-    title: "Frontend Developer",
+    title: "React-based Developer",
     tagline: "Quality-first engineering with a passion for scalable architecture",
     phone: "360-842-4748",
     email: "cjbatson2@gmail.com",
@@ -12,7 +12,7 @@ export const portfolioData = {
   },
 
   // About Section (Strings)
-  summary: "Frontend developer with a CS degree and a background in software testing. I build React applications with a focus on state management, accessibility, and clean architecture. My most recent work includes a 4-month browser-based flowchart editor featuring keyboard accessibility, undo/redo history, and multi-format export — built with React and developed collaboratively with AI tooling as part of the engineering process.\n\nI hold an Oracle Cloud Infrastructure Generative AI certification and bring a quality-first perspective from professional software testing at Core Commissions.",
+  summary: "React-based developer with a CS degree and a background in software testing. I build React applications with a focus on state management, accessibility, and clean architecture. My most recent work includes a 4-month browser-based flowchart editor featuring keyboard accessibility, undo/redo history, and multi-format export — built with React and developed collaboratively with AI tooling as part of the engineering process.\n\nI hold an Oracle Cloud Infrastructure Generative AI certification and bring a quality-first perspective from professional software testing at Core Commissions.",
 
   // Technical Skills (Array of Objects)
   skills: [
@@ -21,8 +21,8 @@ export const portfolioData = {
       items: ["Javascript/TypeScript", "React", "HTML/CSS", "Tailwind CSS"]
     },
     {
-      category: "Tools and Workflow",
-      items: ["Git", "Docker", "Figma", "Trello", "Agile", "CI/CD"]
+      category: "Tools & Frameworks",
+      items: ["Git", "Docker", "Godot 4 / GDScript", "Figma", "Trello", "Agile", "CI/CD"]
     },
     {
       category: "Familiar With",
@@ -72,6 +72,20 @@ export const portfolioData = {
       ],
       github: "https://github.com/bcLego19/game-library",
       liveDemo: "https://bcLego19.github.io/game-library" // Assuming GitHub Pages deployment
+    },
+    {
+      id: 4,
+      title: "2D Action Platformer",
+      description: "An 8-week self-directed project focused on state-machine architecture and custom engine persistence.",
+      technologies: ["Godot 4", "GDScript", "HTML5", "Git"],
+      highlights: [
+        "Implemented state-machine enemy AI and signal-driven Area2D hazards/collectibles",
+        "Built full UI event loop and persistent save/load system using ConfigFile and autoload singletons",
+        "Diagnosed and resolved engine-level bugs, including pause state inheritance and coordinate space mismatches",
+        "Exported and deployed as an HTML5 web build hosted on itch.io"
+      ],
+      github: null, // Update if/when public
+      liveDemo: "https://legophoenix.itch.io/8-week-2d-platformer"
     }
   ]
 }

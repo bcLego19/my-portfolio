@@ -30,14 +30,16 @@ const Projects = ({ projects }) => {
 
 						{/* Action buttons */}
 						<div className="project-links">
-							<a
-								href={project.github}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="btn btn-primary"
-							>
-								View Code
-							</a>
+							{project.github && (
+								<a
+									href={project.github}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="btn btn-primary"
+								>
+									View Code
+								</a>
+							)}
 							{/* Conditional rendering - only show if liveDemo exists */}
 							{project.liveDemo && (
 								<a

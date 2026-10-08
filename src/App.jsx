@@ -34,7 +34,7 @@ const App = () => {
 
         {/* Footer */}
         <footer className="footer">
-          <p>© April 2026 {personal.name}. Built with React + Vite.</p>
+          <p>© October 2026 {personal.name}. Built with React + Vite.</p>
           <p>Special thanks to Rahul Mishra on Unsplash</p>
         </footer>
 
