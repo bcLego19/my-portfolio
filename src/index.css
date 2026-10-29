@@ -6,19 +6,6 @@
 }
 
 /* CSS Variables (Easy theming!) */
-:root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --button-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --button-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.4);
-  --circle-radius: 50%;
-  --text-color: #1f2937;
-  --bg-color: #f9fafb;
-  --card-bg: #ffffff;
-  --border-radius: 8px;
-  --spacing: 1rem;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-color);
@@ -212,7 +199,7 @@ section h2 {
 /* Skills Grid */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
@@ -266,7 +253,7 @@ section h2 {
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 2rem;
 }
 
@@ -276,6 +263,8 @@ section h2 {
   border-radius: var(--border-radius);
   border: 1px solid #e5e7eb;
   transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .project-card:hover {
@@ -299,6 +288,7 @@ section h2 {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -351,16 +341,21 @@ html.dark-mode {
 }
 
 /* Smooth transitions for theme change */
-body,
-section,
-.project-card,
-.skill-group,
-.nav-link,
-.contact-link,
-.btn {
+body, section, .skill-group, .nav-link, .btn {
   transition: background-color var(--transition-speed) ease,
               color var(--transition-speed) ease,
               border-color var(--transition-speed) ease;
+}
+
+.project-card {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              background-color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+}
+
+.contact-link {
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
 }
 
 /* ========================================
@@ -567,26 +562,30 @@ html.dark-mode .back-to-top:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .app {
-    padding: 1rem;
-  }
+  .app { padding: 1rem; }
 
   .back-to-top {
-    width: 48px;   /* Meet minimum touch target */
+    width: 48px;
     height: 48px;
     bottom: 1rem;
     right: 1rem;
     font-size: 1.25rem;
   }
-  
-  .header-content .name {
-    font-size: 2rem;
-  }
-  
-  .projects-grid,
-  .skills-container {
-    grid-template-columns: 1fr;
-  }
+
+  .header { padding: 2rem 1rem; }
+  .header-content .name { font-size: 2rem; }
+  .nav-list { gap: 1rem; }
+  .skills-container { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 400px) {
+  section { padding: 1.25rem; }
+  section h2 { font-size: 1.5rem; }
+  .project-card { padding: 1rem; }
+  .header { padding: 1.5rem 0.75rem; }
+  .header-content .name { font-size: 1.75rem; }
+  .nav-list { flex-wrap: wrap; gap: 0.5rem; }
 }
 
 /* Reduce motion for accessibility */
